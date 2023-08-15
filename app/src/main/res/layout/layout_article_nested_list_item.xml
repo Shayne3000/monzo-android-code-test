@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="10dp">
+    android:layout_height="64dp"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
-        android:id="@+id/article_thumbnail_imageview"
-        android:layout_width="35sp"
-        android:layout_height="wrap_content" />
+        android:id="@+id/article_thumbnail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/article_thumbnail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/article_headline_textview"
+        android:id="@+id/article_headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="sans-serif-regular"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text = "The time is now"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/article_thumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/article_timestamp"
+        />
+
+    <TextView
+        android:id="@+id/article_timestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="sans-serif-regular"
-        android:textColor="@color/black" />
-</LinearLayout>
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        tools:text = "11/08/2023"
+        app:layout_constraintStart_toEndOf="@id/article_thumbnail"
+        app:layout_constraintTop_toBottomOf="@id/article_headline" />
+</androidx.constraintlayout.widget.ConstraintLayout>

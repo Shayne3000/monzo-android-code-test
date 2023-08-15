@@ -11,6 +11,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.monzo.androidtest.HeadlinesApp
 import com.monzo.androidtest.R
 import com.monzo.androidtest.articles.ArticleAdapter
+import com.monzo.androidtest.databinding.ActivityArticleListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,7 +31,8 @@ class ArticleListActivity : AppCompatActivity() {
         setSupportActionBar(binding.articleListToolbar)
 
         adapter = ArticleGroupListAdapter(this) {
-            // TODO start the detail activity passing in the apiUrl of the clicked article as an intent extra for loading in the detail screen.
+            // TODO start the detail activity passing in the apiUrl of the
+            //  clicked article as an intent extra for loading in the detail screen.
         }
         binding.articlesGroupList.layoutManager = LinearLayoutManager(this)
         binding.articlesGroupList.adapter = adapter
