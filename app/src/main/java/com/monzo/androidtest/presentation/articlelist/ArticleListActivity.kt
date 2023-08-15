@@ -3,14 +3,9 @@ package com.monzo.androidtest.presentation.articlelist
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.snackbar.Snackbar
-import com.monzo.androidtest.HeadlinesApp
 import com.monzo.androidtest.R
-import com.monzo.androidtest.articles.ArticleAdapter
 import com.monzo.androidtest.databinding.ActivityArticleListBinding
 import dagger.hilt.android.AndroidEntryPoint
 

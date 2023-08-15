@@ -5,13 +5,13 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import retrofit2.http.Url
 
-interface ArticleRemoteService {
+interface ArticleService {
     @GET("search")
     fun searchArticles(
         @Query("q") searchTerm: String = "fintech,brexit",
         @Query("show-fields") showFields: String = "headline,thumbnail",
         @Query("page") page: Int = 1,
-        @Query("page-size") pageSize: Int = 20
+        @Query("page-size") pageSize: Int = 50
     ): Single<NetworkArticleResponse>
 
     /**

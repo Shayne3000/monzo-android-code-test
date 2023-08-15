@@ -1,7 +1,7 @@
 package com.monzo.androidtest.di
 
 import android.content.Context
-import com.monzo.androidtest.data.remote.ArticleRemoteService
+import com.monzo.androidtest.data.remote.ArticleService
 import com.monzo.androidtest.util.ConnectivityInterceptor
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
@@ -84,8 +84,8 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideArticleRemoteService(retrofit: Retrofit): ArticleRemoteService =
-        retrofit.create(ArticleRemoteService::class.java)
+    fun provideArticleRemoteService(retrofit: Retrofit): ArticleService =
+        retrofit.create(ArticleService::class.java)
 }
 
 class AuthorisationInterceptor : Interceptor {
