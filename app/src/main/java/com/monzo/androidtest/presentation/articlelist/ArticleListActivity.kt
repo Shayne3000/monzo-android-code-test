@@ -26,8 +26,7 @@ class ArticleListActivity : AppCompatActivity() {
         setSupportActionBar(binding.articleListToolbar)
 
         adapter = ArticleGroupListAdapter(this) {
-            // TODO start the detail activity passing in the apiUrl of the
-            //  clicked article as an intent extra for loading in the detail screen.
+            // TODO start the detail activity and pass in the apiUrl of the clicked article to the detail screen.
         }
         binding.articlesGroupList.layoutManager = LinearLayoutManager(this)
         binding.articlesGroupList.adapter = adapter

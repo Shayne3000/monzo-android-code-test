@@ -20,6 +20,6 @@ class ArticleRepository @Inject constructor(
         return articleApi.searchArticles().map {
             it.response.results.toExternalGroupList()
         }.subscribeOn(ioScheduler).observeOn(uiScheduler)
-        // TODO Replace this whole setup with a Paging flow driven by the room DB
+        // TODO Replace this with a Paging implementation driven by the room DB
     }
 }
