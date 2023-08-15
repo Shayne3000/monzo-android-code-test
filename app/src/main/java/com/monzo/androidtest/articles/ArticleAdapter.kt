@@ -25,7 +25,7 @@ internal class ArticleAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val layoutInflater = LayoutInflater.from(context)
-        val view = layoutInflater.inflate(R.layout.list_item_article, parent, false)
+        val view = layoutInflater.inflate(R.layout.layout_article_nested_list_item, parent, false)
         return ArticleViewHolder(view)
     }
 
