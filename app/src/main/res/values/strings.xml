@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">The Guardian</string>
+    <string name="article_list_title">The Guardian</string>
+    <string name="article_thumbnail">thumbnail</string>
+    <string name="article_group_header_this_week">This week</string>
+    <string name="article_group_header_last_week">Last week</string>
+    <string name="article_group_header_past_weeks">%1$s weeks ago</string>
+    <string name="generic_error_message">An error occurred!</string>
+    <string name="connectivity_error_message">There\'s no internet connection. Please connect to the internet and try again.</string>
 </resources>

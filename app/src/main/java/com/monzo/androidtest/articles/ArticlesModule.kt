@@ -5,6 +5,8 @@ import android.content.res.Resources
 import com.monzo.androidtest.R
 import com.monzo.androidtest.api.GuardianService
 import com.monzo.androidtest.articles.model.ArticleMapper
+import com.monzo.androidtest.data.ArticlesRepository
+import com.monzo.androidtest.presentation.articlelist.ArticleListViewModel
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -18,8 +20,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.*
 
 class ArticlesModule {
-    fun inject(context: Context): ArticlesViewModel {
-        return ArticlesViewModel(ArticlesRepository(createGuardianService(context), ArticleMapper()))
+    fun inject(context: Context): ArticleListViewModel {
+        return ArticleListViewModel(ArticlesRepository(createGuardianService(context), ArticleMapper()))
     }
 
     private fun createGuardianService(context: Context): GuardianService {
